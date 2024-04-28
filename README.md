@@ -1,3 +1,17 @@
+install node, working on node 10.12.2, npm 10.5.0
+git clone 
+npm i
+add node_modules to .gitignore
+npm run start
+
+
+if:
+sh: 1: webpack: Permission denied
+need to allow permission in node_modules.bin
+>chmod +x node_modules/.bin/*
+
+-------------------------------------------------------------------------------------
+
 # Welcome
 I created this basic project to get the hang of Webpack and some Javascript.
 
