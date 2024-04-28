@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root{
+    --bg:rgba(25,59,102,0.10);
+    --main: rgba(20,121,255,1);
+    --mainPressed:rgba(164,192,228,1);
+    --font: rgba(26,59,104,1);
+    --fontAccess:rgbs(20,165,255,0.3);
+    --buttonFont:rgba(254,254,254,0.837);
+    --font1: 'Poppins';
+    --font-weight1: 600; /* Semi-Bold */
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--font);
+    font-family: var(--font1);
+    font-weight: var(--font-weight1);
+}
+
+button:focus{
+    outline:none;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-family: var(--font1);
+    font-weight: var(--font-weight1);
+}
+
+.sources{
+    align-items: center;
+}
+
+.demo{
+    background-color:var(--main);
+    border:0;
+    border-radius:10px;
+    color:var(--buttonFont);
+    height:50px;
+    width:100px;
+    box-shadow:5px 7px 15px -1px rgba(0,0,0,0.22);
+}
+
+.demo:active{
+    background-color:var(--mainPressed);
+    color:black
+}
+
+.demoActive {
+    background-color:rgb(116, 170, 237);
+    color: black;
+    height: 50px;
+    width: 100px;
+    box-shadow: 5px 7px 15px -1px rgba(0,0,0,0.22);
+    border: 0;
+    border-radius: 10px;
+}
