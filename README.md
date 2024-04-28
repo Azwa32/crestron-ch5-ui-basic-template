@@ -1,5 +1,6 @@
 install node, working on node 10.12.2, npm 10.5.0
 git clone 
+cd CH5-Template
 npm i
 add node_modules to .gitignore
 npm run start
