@@ -1,4 +1,4 @@
-import CrComLib from "@crestron/ch5-crcomlib";
+import CrComLib from "@crestron/ch5-crcomlib/build_bundles/cjs/cr-com-lib.js";
 import './styles/styles.scss';
 
 
