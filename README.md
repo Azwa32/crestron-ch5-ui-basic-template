@@ -1,13 +1,13 @@
-install node, working on node 10.12.2, npm 10.5.0
-git clone 
-cd CH5-Template
-npm i
-add node_modules to .gitignore
-npm run start
+- install node, working on node 10.12.2, npm 10.5.0
+- >git clone 
+- >cd CH5-Template
+- install node_modules >npm i
+- add node_modules to .gitignore
+- >npm run start
 go to http://localhost:8080/ to view in browser
 
 
-
+# Touble Shooting
 if:
 sh: 1: webpack: Permission denied
 need to allow permission in node_modules.bin
