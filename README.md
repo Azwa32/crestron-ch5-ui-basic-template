@@ -20,14 +20,14 @@ If using the dev server (npm run start) you may need to login to the processor u
 - run app ```npm run start```
 - go to http://localhost:8080/ to view in browser
 
-- to get the ch5z for transferring ```run build``` then archive scripts
+- to get the ch5z for transferring ```npm run build``` then ```npm run archive``` 
 If you've updated the tsw script, this will handle the build/archive/transfer for you.
 
 ### Toubleshooting
 if:
 sh: 1: webpack: Permission denied
 need to allow permission in node_modules.bin
->chmod +x node_modules/.bin/*
+```>chmod +x node_modules/.bin/*```
 
 
 # Other Useful Repositories 
