@@ -27,11 +27,19 @@ button {
     height: 50px;
     font-family: var(--font1);
     font-weight: var(--font-weight1);
+    margin:5px
 }
 
-.sources{
-    align-items: center;
+.heading {
+    text-align: center;
 }
+
+.controls {
+    margin:auto;
+    width: 29em;
+    transform: translate(0, 50%)
+}
+
 
 .demo{
     background-color:var(--main);
