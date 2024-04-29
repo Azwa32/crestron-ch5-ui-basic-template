@@ -4,6 +4,8 @@ cd CH5-Template
 npm i
 add node_modules to .gitignore
 npm run start
+go to http://localhost:8080/ to view in browser
+
 
 
 if:
