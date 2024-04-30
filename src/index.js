@@ -10,7 +10,7 @@ function handleSourcePress(e){
     // have to first convert the value to int
         const value = parseInt(e.target.value, 10); // get the value of the target, in this case "e"
         CrComLib.publishEvent("b", e.target.value, true);  // set high
-        CrComLib.publishEvent("b", e.target.value, false); // reset low
+        setTimeout(() => CrComLib.publishEvent("b", e.target.value, false),200);  // reset low after pause
         console.log(e.target.id, "button was pressed!", e.target.value);
         console.log(e)
 
