@@ -3,7 +3,9 @@
 -------------------------------------------------------------------------------------
 
 # Welcome
-Here is a basic template to get started with Crestron CH5 
+Here is a basic template to get started with Crestron CH5 which uses:
+
+HTML, Java Script, SCSS, Node.js, Webpack
 
 # Info
 Edit package.json scripts, replace the IP addresses with the ones for your devices.
