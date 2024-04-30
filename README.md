@@ -4,6 +4,8 @@ Here is a basic template to get started with Crestron CH5 which uses:
 HTML, Java Script, SCSS, Node.js, Webpack
 
 # Instructions
+
+### Initial setup
 - In VS Code extensions install "Crestron Components"
 - install node (tested in node 10.12.2, npm 10.5.0)
 - ```git clone```
