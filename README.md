@@ -1,33 +1,34 @@
-
-
--------------------------------------------------------------------------------------
-
 # Welcome
 Here is a basic template to get started with Crestron CH5 which uses:
 
 HTML, Java Script, SCSS, Node.js, Webpack
 
-# Info
-Edit package.json scripts, replace the IP addresses with the ones for your devices.
-Also edit index.js file for the Web Xpanel configuration to match your processor IP.
-
-If using the dev server (npm run start) you may need to login to the processor using the browser if you have auth enabled before it will work. (Use F12, you'll see link in console if it hasn't been able to login)
-
-# Installation Instructions
-
-- install node, tested on node 10.12.2, npm 10.5.0
+# Instructions
+- In VS Code extensions install "Crestron Components"
+- install node (tested in node 10.12.2, npm 10.5.0)
 - ```git clone```
 - ```cd CH5-Template```
 - install node_modules ```npm i```
-- run app ```npm run start```
+
+### Run app in browser
+- ```npm run start```
 - go to http://localhost:8080/ to view in browser
 
+### Create .ch5z for transfer to touchpanel
 - to get the ch5z for transferring ```npm run build``` then ```npm run archive``` 
 If you've updated the tsw script, this will handle the build/archive/transfer for you.
 
+### Transfer directly to touch panel
+- Edit package.json scripts, replace the IP addresses with the ones for your devices.
+- ```npm run tsw```
+
+### Connect to controller from dev server
+- If using the dev server ```npm run start``` you may need to login to the processor using the browser if you have auth enabled before it will work. (Use F12, you'll see link in console if it hasn't been able to login)
+
+
 ### Toubleshooting
-if:
-sh: 1: webpack: Permission denied
+error:
+```sh: 1: webpack: Permission denied```
 need to allow permission in node_modules.bin
 ```>chmod +x node_modules/.bin/*```
 
