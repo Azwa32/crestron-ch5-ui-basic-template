@@ -32,7 +32,7 @@ If you've updated the tsw script, this will handle the build/archive/transfer fo
 error:
 ```sh: 1: webpack: Permission denied```
 need to allow permission in node_modules.bin
-```>chmod +x node_modules/.bin/*```
+run ```chmod +x node_modules/.bin/*```
 
 
 # Other Useful Repositories 
