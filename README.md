@@ -16,12 +16,12 @@ HTML, Java Script, SCSS, Node.js, Webpack
 - ```npm run start```
 - go to http://localhost:8080/ to view in browser
 
-### Create .ch5z for transfer to touchpanel
-- to get the ch5z for transferring ```npm run build``` then ```npm run archive``` 
+### Create .ch5z for transfer to touchpanel later
+- to get the ch5z for transferring ```npm run deploy``` 
 If you've updated the tsw script, this will handle the build/archive/transfer for you.
 
 ### Transfer directly to touch panel
-- Edit package.json scripts, replace the IP addresses with the ones for your devices.
+- Edit package.json script "tsw", replace the IP addresses with the ones for your devices.
 - ```npm run tsw```
 
 ### Connect to controller from dev server
