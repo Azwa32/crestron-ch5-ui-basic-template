@@ -4,26 +4,34 @@ import './styles/styles.scss';
 
 CrComLib = CrComLib.CrComLib; // Re-assign CrComLib local variable to the CrComLib.CrComLib object that exists in 2.6+
 
+window.CrComLib = CrComLib;
+window.bridgeReceiveIntegerFromNative = CrComLib.bridgeReceiveIntegerFromNative;
+window.bridgeReceiveBooleanFromNative = CrComLib.bridgeReceiveBooleanFromNative;
+window.bridgeReceiveStringFromNative = CrComLib.bridgeReceiveStringFromNative;
+window.bridgeReceiveObjectFromNative = CrComLib.bridgeReceiveObjectFromNative;
+
+
 // Example of a container of buttons
 function handleSourcePress(e){
     // Sends value from the button to analog join 1 in simpl
     // have to first convert the value to int
-        const value = parseInt(e.target.value, 10); // get the value of the target, in this case "e"
-        CrComLib.publishEvent("b", e.target.value, true);  // set high
-        setTimeout(() => CrComLib.publishEvent("b", e.target.value, false),200);  // reset low after pause
-        console.log(e.target.id, "button was pressed!", e.target.value);
+        const value = e.target.value; // get the value of the target, in this case "e"
+        const id = e.target.id        // get the id of the target
+        CrComLib.publishEvent("b", value, true);  // set high
+        setTimeout(() => CrComLib.publishEvent("b", value, false),200);  // reset low after pause
+        console.log(id, "button was pressed!", value);
         console.log(e)
 
         // interlock logic
-        // get any source buttons with active css
-        var els = document.getElementsByClassName("demoActive");
+        // get any source with "src" in the ID
+        var sources = document.querySelectorAll('[id*="src"]');
         // set the elemeent back to inactive
-        Array.from(els).forEach((el) => {
-            document.getElementById(el.id).className = "demo";
+        Array.from(sources).forEach((el) => {
+            document.getElementById(el.id).className = "test";
         });
 
         // now set the source button that was just pressed to active
-        document.getElementById(`src${e.target.value}`).className = "demoActive";
+        document.getElementById(`src${e.target.value}`).className = "testActive";
 }
     
 // listens to the class called sources and runs whenever pressed.  So basically any button inside the div
@@ -37,20 +45,14 @@ document.querySelector(".sources").addEventListener("click", function (event) { 
 });
 
 
-//Touchpanel feedback, Shows error when testing in web browser
-// Digital joins 5 to 8
+// feedback from controller, sets respective fb# button to demoActive class
 for (let i = 5; i <= 8; i++) {
-    CrComLib.subscribeState('b', i, function(value) {
-        // This function will run whenever the current digital join changes.
-        console.log('Digital join ' + i + ' changed to: ' + value);
-
-        // You can add your own logic here to handle the change.
-        // For example, you might want to update the UI to reflect the new state.
+    CrComLib.subscribeState('b', String(i), (value) => {
         if (value) {
-            document.getElementById(`resp${i}`).className = 'active';
+            document.getElementById('resp' + (i - 4)).className = 'testActive';
+            document.getElementById('src' + (i - 4)).className = 'testActive';
         } else {
-            document.getElementById(`resp${i}`).className = 'inactive';
+            document.getElementById('resp' + (i - 4)).className = 'test';
         }
     });
 }
-    //document.getElementById(`resp${e.target.value}`).className = "demoActive";
