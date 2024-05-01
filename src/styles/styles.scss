@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 :root{
-    --bg:rgb(186, 193, 202);
+    --bg:rgba(255, 255, 255, 1);
     --main: rgba(20,121,255,1);
     --mainPressed:rgba(164,192,228,1);
     --font: rgba(26,59,104,1);
@@ -23,45 +23,46 @@ button:focus{
 }
 
 button {
-    width: 100px;
-    height: 50px;
+    width: 23%;
+    height: 100px;
+    border:0;
+    border-radius:30px;
     font-family: var(--font1);
     font-weight: var(--font-weight1);
-    margin:5px
+    font-size: 20px;
+    margin:5px;
+    box-shadow:5px 7px 15px -1px rgba(0,0,0,0.22);
 }
 
 .heading {
     text-align: center;
+    font-size: 50px;
+}
+
+.info {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
 }
 
 .controls {
     margin:auto;
-    width: 29em;
-    transform: translate(0, 50%)
+    width: 50em;
+    transform: translate(0, 15%)
 }
 
 
-.demo{
+.test{
     background-color:var(--main);
-    border:0;
-    border-radius:10px;
-    color:var(--buttonFont);
-    height:50px;
-    width:100px;
-    box-shadow:5px 7px 15px -1px rgba(0,0,0,0.22);
+    color:var(--buttonFont);  
 }
 
-.demo:active{
+.test:active{
     background-color:var(--mainPressed);
     color:black
 }
 
-.demoActive {
+.testActive {
     background-color:rgb(116, 170, 237);
     color: black;
-    height: 50px;
-    width: 100px;
-    box-shadow: 5px 7px 15px -1px rgba(0,0,0,0.22);
-    border: 0;
-    border-radius: 10px;
 }
