@@ -7,7 +7,7 @@ HTML, Java Script, SCSS, Node.js, Webpack
 
 ### Initial setup
 - In VS Code extensions install "Crestron Components"
-- install node (tested in node 10.12.2, npm 10.5.0)
+- install node (tested in node 20.12.2, npm 10.5.0)
 - ```git clone https://github.com/Azwa32/CH5-Basic-Template.git```
 - ```cd CH5-Basic-Template```
 - install node_modules ```npm i```
